@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   padding: 1.4rem 1rem;
+  /* padding: 1.4rem 0; */
   background-color: var(--color-bg-dark);
   border-top: 1px solid var(--color-text);
 }
@@ -12,6 +13,7 @@
   flex: 1 0 auto;
   outline: none;
   border: none;
+  width: 100%;
   font-family: galmuri9;
   font-size: 1.3rem;
   letter-spacing: -1px;
@@ -28,6 +30,7 @@
   font-size: 1.3rem;
   letter-spacing: -1px;
   padding: 0 2rem;
+  width: 100%;
   background-color: var(--color-accent);
   color: var(--color-white);
   cursor: pointer;
@@ -35,4 +38,11 @@
 
 .button:hover {
   filter: brightness(103%);
+}
+
+.inputWrap {
+  width: 160vw;
+}
+.addWrap {
+  width: 40vw;
 }

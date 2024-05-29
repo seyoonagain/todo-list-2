@@ -23,14 +23,18 @@ export default function AddTodo({ onAdd }) {
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          className={styles.input}
-          type="text"
-          onChange={handleChange}
-          value={text}
-          placeholder="Type a task"
-        />
-        <button className={styles.button}>add</button>
+        <div className={styles.inputWrap}>
+          <input
+            className={styles.input}
+            type="text"
+            onChange={handleChange}
+            value={text}
+            placeholder="Type a task"
+          />
+        </div>
+        <div className={styles.addWrap}>
+          <button className={styles.button}>add</button>
+        </div>
       </form>
     </>
   );

@@ -3,7 +3,7 @@
   --color-accent: rgb(46, 103, 189);
   --color-title: white;
   --color-title-shadow: rgb(46, 103, 189);
-  --color-menu: rgb(101, 63, 40);
+  --color-menu: rgb(156, 76, 44);
   --color-menu-shadow: white;
   --color-menu-accent: rgb(232, 88, 32);
   --color-important: rgb(255, 166, 0);
@@ -55,9 +55,9 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   height: 70%;
-  max-width: 700px;
+  max-width: 800px;
   background-color: var(--color-accent);
   border: 1px solid black;
   box-shadow: var(--color-box-shadow) 10px 10px 0px;
