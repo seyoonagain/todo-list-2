@@ -1,0 +1,44 @@
+@import url("https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+.todo {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.1rem 0;
+}
+
+.text {
+  flex: 1 1 0%;
+  margin-left: 0.5rem;
+  color: var(--color-list);
+  font-family: galmuri11;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--color-text);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-list);
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  transition: all 200ms ease-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: var(--color-important);
+}
+
+.important {
+  color: var(--color-important);
+}

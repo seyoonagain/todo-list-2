@@ -1,0 +1,39 @@
+@import url("https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+.form {
+  display: flex;
+  width: 100%;
+  padding: 1.4rem 1rem;
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid var(--color-text);
+}
+
+.input {
+  flex: 1 0 auto;
+  outline: none;
+  border: none;
+  font-family: galmuri9;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  background-color: transparent;
+  color: var(--color-list);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.input::placeholder {
+  color: var(--color-text);
+}
+
+.button {
+  font-family: galmuri7;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  padding: 0 2rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(103%);
+}
