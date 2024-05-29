@@ -3,6 +3,12 @@ import styles from "./Header.module.css";
 import { BsTrash2 } from "react-icons/bs";
 import { IoMoonSharp, IoSunnySharp } from "react-icons/io5";
 import { useDarkMode } from "../../context/DarkModeContext";
+import {
+  PiCheckFat,
+  PiCheckFatFill,
+  PiListBold,
+  PiStarFill,
+} from "react-icons/pi";
 
 export default function Header({ filters, filter, onFilterChange }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -18,7 +24,7 @@ export default function Header({ filters, filter, onFilterChange }) {
         to do
       </h1>
       <section className={styles.filters}>
-        <ul className={styles.filtersExceptTrash}>
+        <ul className={styles.filtersChar}>
           {filters.map((value, index) => (
             <li key={index}>
               <button
@@ -32,14 +38,48 @@ export default function Header({ filters, filter, onFilterChange }) {
             </li>
           ))}
         </ul>
-        <span className={`${filter === "deleted" && styles.selected}`}>
+        <ul className={styles.filtersIcon}>
+          <button>
+            <PiListBold
+              className={`${styles.filterIcon} ${
+                filter === "all" && styles.selected
+              }`}
+              onClick={() => onFilterChange("all")}
+            />
+          </button>
+          <button>
+            <PiStarFill
+              className={`${styles.filterIcon} ${
+                filter === "important" && styles.selected
+              }`}
+              onClick={() => onFilterChange("important")}
+            />
+          </button>
+          <button>
+            <PiCheckFat
+              className={`${styles.filterIcon} ${
+                filter === "to do" && styles.selected
+              }`}
+              onClick={() => onFilterChange("to do")}
+            />
+          </button>
+          <button>
+            <PiCheckFatFill
+              className={`${styles.filterIcon} ${
+                filter === "done" && styles.selected
+              }`}
+              onClick={() => onFilterChange("done")}
+            />
+          </button>
+        </ul>
+        <button>
           <BsTrash2
-            className={`${styles.deleted} ${
+            className={`${styles.filterIcon} ${
               filter === "deleted" && styles.selected
             }`}
             onClick={() => onFilterChange("deleted")}
           />
-        </span>
+        </button>
       </section>
     </header>
   );

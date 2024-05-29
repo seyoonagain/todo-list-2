@@ -38,6 +38,7 @@ h1 {
   -webkit-text-stroke: 1px black;
   color: var(--color-title);
   text-shadow: var(--color-title-shadow) 5px 5px 0;
+  line-height: 0.8;
 }
 
 .filters {
@@ -49,14 +50,19 @@ h1 {
   border-bottom: 1px solid var(--color-list);
 }
 
-.filtersExceptTrash {
+.filtersChar {
   display: flex;
   margin: 0;
-  column-gap: 30px;
+  column-gap: 20px;
+}
+
+.filtersIcon {
+  display: flex;
+  column-gap: 20px;
 }
 
 .filter,
-.deleted {
+.filterIcon {
   background-color: transparent;
   margin-bottom: 0;
   font-family: "Silkscreen", sans-serif;
@@ -68,14 +74,14 @@ h1 {
   cursor: pointer;
 }
 
-.deleted {
+.filterIcon {
   width: 25px;
   height: 25px;
   transition: all 150ms ease-out;
 }
 
 .filter:hover,
-.deleted:hover,
+.filterIcon:hover,
 .selected {
   color: var(--color-menu-accent);
   transform: scale(1.1);
@@ -86,14 +92,24 @@ h1 {
   text-shadow: var(--color-menu-shadow) 2px 2px 0;
 }
 
-@media screen and (min-width: 768px) {
+button {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 900px) {
   br {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .filtersExceptTrash {
-    column-gap: 15px;
+@media screen and (min-width: 576px) {
+  .filtersIcon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filtersChar {
+    display: none;
   }
 }
