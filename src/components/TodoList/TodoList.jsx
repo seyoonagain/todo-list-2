@@ -26,12 +26,12 @@ export default function TodoList({ filter }) {
   };
 
   const handleDelete4good = (deleted) => {
-    setDeletedTodos(deletedTodos.filter((t) => t.id != deleted.id));
+    setDeletedTodos(deletedTodos.filter((t) => t.id !== deleted.id));
   };
 
   const handleRestore = (restored) => {
     setTodos((t) => [...t, restored]);
-    setDeletedTodos(deletedTodos.filter((t) => t.id != restored.id));
+    setDeletedTodos(deletedTodos.filter((t) => t.id !== restored.id));
   };
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function TodoList({ filter }) {
   return (
     <section className={styles.container}>
       <ul className={styles.list}>
-        {filter != "deleted"
+        {filter !== "deleted"
           ? filtered.map((task) => (
               <Todo
                 key={task.id}
