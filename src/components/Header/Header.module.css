@@ -6,7 +6,7 @@
 .toggle {
   padding: 0 1rem;
   padding-top: 1rem;
-  background-color: var(--color-bg-dark);
+  background-color: transparent;
   color: var(--color-menu);
   cursor: pointer;
   transition: all 150ms ease-out;
